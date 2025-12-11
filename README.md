@@ -1,19 +1,29 @@
-# Options Greeks Calculator
+# NIFTY Forecasting with ARIMA + GARCH
 
-## 📘 Overview  
-This project implements:
-- Black–Scholes Model  
-- Delta, Gamma, Theta, Vega, Rho  
-- Payoff diagrams for call/put  
-- Sensitivity plots  
+**Goal:** Build a forecasting and volatility modelling dashboard for NIFTY 50 using ARIMA for returns and GARCH(1,1) for conditional volatility.
 
-## 🧠 Skills Demonstrated  
-- Financial engineering  
-- Numerical methods  
-- Python for quant finance  
-- Data visualization  
+## Project Status
 
-## ▶ How to Run  
-Open the Jupyter notebook inside `notebooks/` or run:
+- [x] Project structure
+- [ ] Data download & cleaning
+- [ ] ARIMA modelling
+- [ ] GARCH volatility modelling
+- [ ] Dashboard & plots
+- [ ] Evaluation & documentation
+
+## Tech stack
+
+- Python (pandas, numpy, statsmodels, arch, matplotlib/plotly)
+- Jupyter Notebooks
+- Streamlit (for final dashboard)
+
+## Planned features
+
+- ADF stationarity test on NIFTY returns
+- ARIMA model for mean dynamics
+- GARCH(1,1) for volatility clustering
+- 30-day forecast for price & volatility
+- RMSE comparison vs naive forecast
+- Clear plots and a simple dashboard
 
 
