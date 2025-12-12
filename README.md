@@ -54,9 +54,9 @@ The model with **minimum AIC** (here, **ARIMA(1,0,0)**) is selected.
 
 The ARIMA residuals show volatility clustering, so we model the conditional variance with **GARCH(1,1)**:
 
-\[
+$$
 \sigma_t^2 = \omega + \alpha \epsilon_{t-1}^2 + \beta \sigma_{t-1}^2
-\]
+$$
 
 Key interpretation:
 
