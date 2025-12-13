@@ -95,6 +95,8 @@ We report **RMSE** for both; even modest improvements over the naive benchmark a
 
 ## Repository structure
 
-- src/: main Jupyter notebook
 - plots/: forecast and volatility plots
-- README.md, requirements.txt
+- src/: main Jupyter notebook
+- .gitignore
+- README.md
+- requirements.txt
