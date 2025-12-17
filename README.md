@@ -45,29 +45,26 @@ A low p-value (p < 0.05) supports treating log returns as stationary.
 
 We model the conditional mean of returns with ARIMA(p,0,q).  
 A small grid of candidate models (e.g. (1,0,0), (0,0,1), (1,0,1)) is evaluated using **AIC**:
+$AIC = 2k - 2 \ln(\hat{L})$
 
-\[
-AIC = 2k - 2\ln(\hat{L})
-\]
-
-where \(k\) is the number of parameters and \(\hat{L}\) is the maximized likelihood.  
+where $\(k\)$ is the number of parameters and $(\hat{L})$ is the maximized likelihood.  
 The model with **minimum AIC** (here, **ARIMA(1,0,0)**) is selected.
 
 ### GARCH(1,1) (Volatility)
 
 The ARIMA residuals show volatility clustering, so we model the conditional variance with **GARCH(1,1)**:
 
-\[
+$$
 \sigma_t^2 = \omega + \alpha \epsilon_{t-1}^2 + \beta \sigma_{t-1}^2
-\]
+$$
 
 Key interpretation:
 
-- \(\alpha\): impact of recent shocks  
-- \(\beta\): persistence of volatility  
-- \(\alpha + \beta \approx 1\): highly persistent volatility (typical for equity indices)
+- $\alpha$: impact of recent shocks  
+- $\beta$: persistence of volatility  
+- $\alpha + \beta \approx 1$: highly persistent volatility (typical for equity indices)
 
-In this model, \(\alpha + \beta \approx 0.98\), indicating strong persistence.
+In this model, $\alpha + \beta \approx 0.98$, indicating strong persistence.
 
 ---
 
@@ -98,6 +95,8 @@ We report **RMSE** for both; even modest improvements over the naive benchmark a
 
 ## Repository structure
 
-- src/: main Jupyter notebook
 - plots/: forecast and volatility plots
-- README.md, requirements.txt
+- src/: main Jupyter notebook
+- .gitignore
+- README.md
+- requirements.txt
